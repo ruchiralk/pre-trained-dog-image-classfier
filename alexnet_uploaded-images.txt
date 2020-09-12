@@ -1,0 +1,78 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = alexnet 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                    Desk_01.jpg  label:                       desk
+ 2 key:                     Dog_02.jpg  label:                        dog
+ 3 key:               Wild_Boar_01.jpg  label:                  wild boar
+ 4 key:                     Dog_01.jpg  label:                        dog
+
+     MATCH:
+
+                   Desk_01.jpg: 
+Real:                       desk   Classifier:                           desk
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier: shetland sheepdog, shetland sheep dog, shetland
+
+ NOT A MATCH:
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:   ibizan hound, ibizan podenco
+
+              Wild_Boar_01.jpg: 
+Real:                  wild boar   Classifier:                        warthog
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+
+     MATCH:
+
+                   Desk_01.jpg: 
+Real:                       desk   Classifier:                           desk  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier: shetland sheepdog, shetland sheep dog, shetland  
+PetLabelDog: 1  ClassLabelDog: 1
+
+ NOT A MATCH:
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:   ibizan hound, ibizan podenco  
+PetLabelDog: 1  ClassLabelDog: 1
+
+              Wild_Boar_01.jpg: 
+Real:                  wild boar   Classifier:                        warthog  
+PetLabelDog: 0  ClassLabelDog: 0
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  50.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  50.0
+
+
+*** Result summary for model architecture  ALEXNET  ***
+N Images            :   4
+N Dog Images        :   2
+N Not Dog Imges     :   2
+
+** Percentage Calculations **
+Pct_Match           :  50.0%
+Pct_Correct_Dogs    : 100.0%
+Pct_Correct_Breed   :  50.0%
+Pct_Correct_Notdogs : 100.0%
+
+** Misclassifications **
+
+INCORRECT Dog Breed Assignment:
+Real:                        dog   Classifier:   ibizan hound, ibizan podenco
+
+** Total Elapsed Runtime: 0:0:0
