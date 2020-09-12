@@ -48,7 +48,7 @@ def get_pet_labels(image_dir):
     
     for file in files:
         
-        if file[:1] == '.':
+        if file[0] == '.':
             # skip hidden files starting with '.'
             continue
         
