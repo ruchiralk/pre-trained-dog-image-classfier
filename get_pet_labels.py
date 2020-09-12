@@ -47,6 +47,11 @@ def get_pet_labels(image_dir):
     files = listdir(image_dir)
     
     for file in files:
+        
+        if file[:1] == '.':
+            # skip hidden files starting with '.'
+            continue
+        
         file_name_elements = file.split('_')
         file_name_elements = [element.lower() for element in file_name_elements if element.isalpha()]
         label = " ".join(file_name_elements).strip()
